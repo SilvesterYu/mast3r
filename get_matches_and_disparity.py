@@ -40,7 +40,7 @@ if __name__ == '__main__':
     import os
 
     ### Change this to your own rgb pairs dir
-    rootdir = '/home/lifanyu/Documents/ZED_data/'
+    rootdir = '/home/lifan/Documents/ZED_data/'
     ### Change this for whether or not we want disparity for cropped images
     CROP = True
     RESIZE = True
@@ -61,7 +61,7 @@ if __name__ == '__main__':
 
     for obj in folders:
 
-        device = 'cuda'
+        device = 'cpu'
         schedule = 'cosine'
         lr = 0.01
         niter = 300
