@@ -30,9 +30,9 @@ def compute_disparity_map(image_shape, matching_points_left, matching_points_rig
             disparity = x_left - x_right  # Compute horizontal disparity
             disparity_map[y_left, x_left] = disparity
     if CROP:
-        np.save(rootdir + "disparity_npy/" + obj + "_cropped.npy", disparity_map)
+        np.save(rootdir + "disparity_mast3r/" + obj + "_cropped.npy", disparity_map)
     else:
-        np.save(rootdir + "disparity_npy/" + obj + ".npy", disparity_map)
+        np.save(rootdir + "disparity_mast3r/" + obj + ".npy", disparity_map)
     return disparity_map
 
 if __name__ == '__main__':
@@ -43,7 +43,7 @@ if __name__ == '__main__':
     rootdir = '/home/lifan/Documents/ZED_data/'
     ### Change this for whether or not we want disparity for cropped images
     CROP = True
-    RESIZE = True
+    RESIZE = False
 
     if CROP and RESIZE:
         spec = "_cropped_resized"
